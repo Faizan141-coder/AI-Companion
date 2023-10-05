@@ -1,3 +1,5 @@
+import { Navbar } from "@/components/Navbar"
+
 const RootLayout = ({ 
     children 
 }: {
@@ -5,6 +7,7 @@ const RootLayout = ({
 }) => {
     return (
         <div className="h-full">
+            <Navbar />
             <main className="md:pl-20 pt-16 h-full">
                 {children}
             </main>
