@@ -26,7 +26,7 @@ export const Navbar = () => {
                         "hidden md:block text-xl md:text-3xl font-bold text-primary", 
                         font.className
                     )}>
-                        compnaion.ai 
+                        companion.ai 
                     </h1>
                 </Link>
             </div>

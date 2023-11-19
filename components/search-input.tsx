@@ -26,7 +26,7 @@ export const SearchInput = () => {
     useEffect(() => {
         const query = {
             name: debouncedValue,
-            categoryId: categoryId || null || ""
+            categoryId: categoryId
         }
 
         const url = qs.stringifyUrl({
