@@ -29,11 +29,11 @@ export const Companions = ({
                         fill
                         src='/empty.png'
                         alt="Empty"
-                        className="grayscale"
+                        // className="grayscale"
                     />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                    No companions found.
+                    No companions found
                 </p>
             </div>
         )
