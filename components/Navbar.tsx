@@ -29,14 +29,17 @@ export const Navbar = ({ isPro }: NavbarProps) => {
       <div className="flex items-center">
         <MobileSidebar isPro={isPro} />
         <Link href="/">
-          <h1
-            className={cn(
-              "hidden md:block text-xl md:text-3xl font-bold text-primary",
-              font.className
-            )}
-          >
-            companion.ai
-          </h1>
+          <div className="flex items-center justify-center space-x-2">
+            <h1
+              className={cn(
+                "hidden md:block text-xl md:text-3xl font-bold text-primary",
+                font.className
+              )}
+            >
+              Small Talk
+            </h1>
+            <p className="text-md">All Talk, All Action</p>
+          </div>
         </Link>
       </div>
       <div className="flex items-center gap-x-3">
