@@ -202,11 +202,11 @@ export async function POST(
     const { prompt } = await request.json();
     const user = await currentUser();
 
-    if (!user || !user.firstName || !user.id) {
-      return new NextResponse("Unauthorized", { status: 401 });
-    }
+    // if (!user || !user.firstName || !user.id) {
+    //   return new NextResponse("Unauthorized", { status: 401 });
+    // }
 
-    const identifier = request.url + "-" + user.id;
+    const identifier = request.url + "-" + user?.id;
     const { success } = await rateLimit(identifier);
 
     if (!success) {
@@ -222,7 +222,7 @@ export async function POST(
           create: {
             content: prompt,
             role: "user",
-            userId: user.id,
+            userId: user?.id!,
           },
         },
       },
@@ -237,7 +237,7 @@ export async function POST(
 
     const companionKey = {
       companionName: name!,
-      userId: user.id,
+      userId: user?.id!,
       modelName: "gpt-3.5-turbo",
     };
     const memoryManager = await MemoryManager.getInstance();
@@ -321,7 +321,7 @@ export async function POST(
             create: {
               content: reply.trim(),
               role: "system",
-              userId: user.id,
+              userId: user?.id!,
             },
           },
         },
