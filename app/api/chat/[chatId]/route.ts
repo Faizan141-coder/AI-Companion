@@ -222,7 +222,8 @@ export async function POST(
           create: {
             content: prompt,
             role: "user",
-            userId: user?.id!,
+            // @ts-ignore
+            userId: user.id,
           },
         },
       },
