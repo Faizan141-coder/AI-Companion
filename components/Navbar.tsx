@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 
@@ -29,17 +29,14 @@ export const Navbar = ({ isPro }: NavbarProps) => {
       <div className="flex items-center">
         <MobileSidebar isPro={isPro} />
         <Link href="/">
-          <div className="flex items-center justify-center space-x-2">
-            <h1
-              className={cn(
-                "hidden md:block text-xl md:text-3xl font-bold text-primary",
-                font.className
-              )}
-            >
-              Small Talk
-            </h1>
-            <p className="text-md">All Talk, All Action</p>
-          </div>
+          <h1
+            className={cn(
+              "hidden md:block text-xl md:text-3xl font-bold text-primary",
+              font.className
+            )}
+          >
+            Companion AI
+          </h1>
         </Link>
       </div>
       <div className="flex items-center gap-x-3">

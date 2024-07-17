@@ -29,8 +29,7 @@ export const checkSubscription = async () => {
 
   const isValid =
     userSubscription.stripePriceId &&
-    userSubscription.stripeCurrentPeriodEnd?.getTime()! + DAY_IN_MS >
-      Date.now();
+    userSubscription.stripeCurrentPeriodEnd?.getTime()! + DAY_IN_MS > Date.now();
 
   // !! Ensures that it is ALWAYS a boolean
   return !!isValid;
